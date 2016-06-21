@@ -22,7 +22,6 @@ public class Bug_for_issue_457 extends TestCase {
     
     public static class MyEnumDeser implements ObjectDeserializer {
 
-        @Override
         public <T> T deserialze(DefaultJSONParser parser, Type type, Object fieldName) {
             String text = (String) parser.parse();
             if (text.equals("AA")) {
@@ -35,7 +34,6 @@ public class Bug_for_issue_457 extends TestCase {
             return null;
         }
 
-        @Override
         public int getFastMatchToken() {
             return JSONToken.LITERAL_STRING;
         }

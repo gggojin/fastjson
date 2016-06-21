@@ -50,12 +50,10 @@ public class FastjsonArrayMappingCodec implements Codec {
         return (T) JSON.parseObject(input, clazz, Feature.DisableCircularReferenceDetect, Feature.SupportArrayToBean);
     }
 
-    @Override
     public byte[] encodeToBytes(Object object) throws Exception {
         return JSON.toJSONBytes(object, SerializerFeature.DisableCircularReferenceDetect, SerializerFeature.BeanToArray);
     }
 
-    @Override
     public void encode(OutputStream out, Object object) throws Exception {
        JSON.writeJSONString(out, object, SerializerFeature.DisableCircularReferenceDetect, SerializerFeature.BeanToArray);
     }

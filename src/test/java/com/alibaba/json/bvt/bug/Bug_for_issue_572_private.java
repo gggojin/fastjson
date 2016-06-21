@@ -26,7 +26,6 @@ public class Bug_for_issue_572_private extends TestCase {
 
         ValueFilter valueFilter = new ValueFilter() {
 
-            @Override
             public Object process(Object object, String name, Object value) {
                 if (value instanceof Number) {
                     return null;

@@ -25,16 +25,13 @@ public class FastJsonSerializeIterableTest {
         final Person s1 = new Person("fast");
         final Person s2 = new Person("fast");
         Iterable<Person> iterable = new Iterable<Person>() {
-            @Override
             public Iterator<Person> iterator() {
                 return new Iterator<Person>() {
                     int cursor = 0;
-                    @Override
                     public boolean hasNext() {
                         return cursor < 2;
                     }
 
-                    @Override
                     public Person next() {
                         int val = cursor++;
                         switch (val) {
@@ -47,7 +44,6 @@ public class FastJsonSerializeIterableTest {
                         }
                     }
 
-                    @Override
                     public void remove() {
                         throw new UnsupportedOperationException();
                     }

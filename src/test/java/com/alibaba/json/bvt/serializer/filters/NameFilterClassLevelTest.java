@@ -19,7 +19,6 @@ public class NameFilterClassLevelTest extends TestCase {
                          new PascalNameFilter());
         config.addFilter(ModelB.class, //
                          new NameFilter() {
-                             @Override
                              public String process(Object object, String name, Object value) {
                                  return name;
                              }

@@ -67,12 +67,10 @@ public class Jackson2Codec implements Codec {
         return mapper.writeValueAsString(object);
     }
 
-    @Override
     public byte[] encodeToBytes(Object object) throws Exception {
         return mapper.writeValueAsBytes(object);
     }
 
-    @Override
     public void encode(OutputStream out, Object object) throws Exception {
         Class<?> clazz = object.getClass();
         JsonGenerator generator = constructGenerator(out);

@@ -17,7 +17,6 @@ public class PropertyFilterClassLevelTest extends TestCase {
         config.addFilter(ModelA.class, //
                          new PropertyFilter() {
 
-                             @Override
                              public boolean apply(Object object, String name, Object value) {
                                  return false;
                              }
@@ -25,7 +24,6 @@ public class PropertyFilterClassLevelTest extends TestCase {
         config.addFilter(ModelB.class, //
                          new PropertyFilter() {
 
-                             @Override
                              public boolean apply(Object object, String name, Object value) {
                                  return true;
                              }

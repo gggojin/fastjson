@@ -13,7 +13,6 @@ public class ClassNameFilterTest extends TestCase {
     public void test_filter() throws Exception {
         NameFilter upcaseNameFilter = new NameFilter() {
             
-            @Override
             public String process(Object object, String name, Object value) {
                 return name.toUpperCase();
             }

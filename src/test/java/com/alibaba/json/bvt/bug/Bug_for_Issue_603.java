@@ -32,7 +32,6 @@ public class Bug_for_Issue_603 extends TestCase {
     public static class OrderActionEnumDeser implements ObjectDeserializer {
 
         @SuppressWarnings("unchecked")
-        @Override
         public <T> T deserialze(DefaultJSONParser parser, Type type, Object fieldName) {
             Integer intValue = parser.parseObject(int.class);
             if (intValue == 1) {
@@ -43,7 +42,6 @@ public class Bug_for_Issue_603 extends TestCase {
             throw new IllegalStateException();
         }
 
-        @Override
         public int getFastMatchToken() {
             return JSONToken.LITERAL_INT;
         }

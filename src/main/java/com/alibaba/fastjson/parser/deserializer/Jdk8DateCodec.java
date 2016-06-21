@@ -281,7 +281,6 @@ public class Jdk8DateCodec extends ContextObjectDeserializer implements ObjectSe
         }
     }
 
-    @Override
     public void write(JSONSerializer serializer, Object object, BeanContext context) throws IOException {
         SerializeWriter out = serializer.out;
         String format = context.getFormat();

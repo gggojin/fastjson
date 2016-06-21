@@ -21,7 +21,6 @@ public class MTopFilterTest extends TestCase {
         final HashMap<String, Object> values = new HashMap<String, Object>();
         ValueFilter valueFilter = new ValueFilter() {
 
-            @Override
             public Object process(Object object, String name, Object value) {
                 values.put(name, value);
                 return value;

@@ -46,13 +46,11 @@ public class Bug_for_issue_265 extends TestCase {
             return attributes.get(name);
         }
 
-        @Override
         public void write(JSONSerializer serializer, Object fieldName, Type fieldType,
                           int features) throws IOException {
             serializer.write(attributes);
         }
 
-        @Override
         public void processExtra(String key, Object value) {
             attributes.put(key, value);
         }

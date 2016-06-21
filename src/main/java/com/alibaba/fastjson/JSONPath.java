@@ -1826,7 +1826,6 @@ public class JSONPath implements JSONAware {
         }
     }
 
-    @Override
     public String toJSONString() {
         return JSON.toJSONString(path);
     }

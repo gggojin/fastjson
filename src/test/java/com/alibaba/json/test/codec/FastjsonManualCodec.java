@@ -82,7 +82,6 @@ public class FastjsonManualCodec implements Codec {
 
     public static class ImageSerializer implements ObjectSerializer {
 
-        @Override
         public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType,
                           int features) throws IOException {
             Image image = (Image) object;
@@ -105,7 +104,6 @@ public class FastjsonManualCodec implements Codec {
 
     public static class MediaSerializer implements ObjectSerializer {
 
-        @Override
         public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType,
                           int features) throws IOException {
             Media image = (Media) object;
@@ -144,7 +142,6 @@ public class FastjsonManualCodec implements Codec {
         MediaSerializer mediaSer = new MediaSerializer();
         ImageSerializer imageSer = new ImageSerializer();
 
-        @Override
         public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType,
                           int features) throws IOException {
             MediaContent mediaContent = (MediaContent) object;
@@ -175,13 +172,11 @@ public class FastjsonManualCodec implements Codec {
         
     }
 
-    @Override
     public byte[] encodeToBytes(Object object) throws Exception {
         // TODO Auto-generated method stub
         return null;
     }
 
-    @Override
     public void encode(OutputStream out, Object object) throws Exception {
         out.write(encodeToBytes(object));        
     }
